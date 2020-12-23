@@ -1,0 +1,34 @@
+﻿@model StoreWeb.Models.User
+
+@{
+    ViewData["Title"] = "Manager Portal";
+}
+<div class="card">
+    <div class="card-body">
+        <a asp-area="" asp-controller="Manager" asp-action="ViewAllLocations" class="btn btn-info mr-4">Go</a>  View all Locations
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <a asp-area="" asp-controller="Manager" asp-action="ViewOrdersByLocation" class="btn btn-info mr-4">Go</a>  View Orders by Location
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <a asp-area="" asp-controller="Manager" asp-action="GetInventory" class="btn btn-info mr-4">Go</a> Get inventory by location
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <a asp-area="" asp-controller="Manager" asp-action="AddProduct" class="btn btn-info mr-4">Go</a> Add Product to catalog
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <a asp-area="" asp-controller="Manager" asp-action="ReplenishInventory" class="btn btn-info mr-4">Go</a> Replenish Inventory
+        </div>
+    </div>
+
+    @section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }
+</div>
